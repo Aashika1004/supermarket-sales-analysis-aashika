@@ -33,3 +33,22 @@ From the result, it's clear that the highest sales per product category and sub-
     1. Furniture -> Chairs -> $328,449.10
     2. Office Supplies -> Storage -> $223,843.61
     3. Technology -> Phones -> $330,007.05
+
+# [Log Entry 4] - Incorrect Sorting Logic
+ Tried using the following code to get the top-selling product in each state (not included in main code):
+    task_2_df = df.groupby('State','Sub-Category')['Sales'].sum().max()
+    print(task_2_df)
+ Result: This only returned a single maximum value, and not one product per state. My logic itself was incorrectly applied
+         as I realized max doesn't return the top-selling product per grouped category (oops)
+ Lesson learnt: Use .sort_values() (with ascending order of State and descending order of Sales) to properly sort the grouped dataset.
+                Then, work with that sorted data to extract the top item per state.
+
+# [Log Entry 5] - Finding only the top-performing sub-category, based on total sales, for each state
+I used .groupby() on State and Sub-Category and then summed the sales using .sum(). This gave me the total revenue each
+sub-category made within every state.
+To find the top sub-category in each state:
+    1. I sorted the result by State (A-Z) and then Sales ($-USD) (descending order).
+    2. Dropped all duplicates but the first sub-category per state using .drop_duplicates().
+       (basically one sub-category shown per state)
+From the results, this helped me identify what sells best in each state, which could be useful for developing
+location-specific sales strategies!
