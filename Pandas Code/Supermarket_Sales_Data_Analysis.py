@@ -39,3 +39,19 @@ print(task_1_df)
 # plt.title('Total Sales ($-USD) per Product Category')
 # #plt.savefig('task-1-graph-matplotlib.png')
 # plt.show()
+
+##------------------------------
+##TASK-2 -> For each state, find only the top-performing sub-category, based on total sales.
+##[Log Entry 4]
+
+# #Using groupby to group required columns and then using .sum() aggregation function for Sales column, finally using reset_index to turn the result into DataFrame.
+# task_2_df_unsorted = df.groupby(['State','Sub-Category'])['Sales ($-USD)'].sum().reset_index()
+
+# #Sorting the dataset by State column in ascending order, then by the Sales column in descending order
+# task_2_df_sorted = task_2_df_unsorted.sort_values(by=['State', 'Sales ($-USD)'], ascending=[True, False])
+
+# #Removing the duplicated values by only taking the first row of each state (which would be the highest selling product per state)
+# task_2_df = task_2_df_sorted.drop_duplicates(subset='State', keep='first')
+# print(task_2_df)
+
+# #[Log Entry 5]
