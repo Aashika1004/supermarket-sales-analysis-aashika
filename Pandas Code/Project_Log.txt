@@ -1,0 +1,35 @@
+Introduction:
+    Hello! My name is Aashika, and I’m a final-year university student pursuing a Bachelor of Science in Computer Science (Cybersecurity).
+    This mini project was a way to help me get more familiarized with Pandas, Matplotlib and Seaborn while also revisiting
+    core Python skills!
+
+# [Log Entry 1] - Grouping of Multiple columns
+ Tried to print grouped data using:
+    grouped_data = df.groupby(['Category', 'Sub-Category', 'Sales'])
+    print(grouped_data)
+ Expectation: Would print the grouped categories in a dataframe
+ Result: <pandas.core.groupby.generic.DataFrameGroupBy object at 0x00000229573A4590>
+
+ Lesson learnt: .groupby() only creates a GroupBy Object, so when printed python returns the memory address of the object.
+                Always follow up with an aggregation method -> ex: mean(), mode(), sum() etc.
+
+
+# [Log Entry 2] - Sales Aggregation
+ Tried using '.value_counts()' to calculate total sales per product category
+ Expectation: Would print the dataframe with the required columns and total sales data
+ Result: Printed the count of occurrences, not sales totals, output was far too large.
+ Final working solution (used in main code):
+    - Grouped by Category and Sub-Category.
+    - Followed up with a .sum() function used on the 'Sales ($-USD)' column.
+    - Code: df.groupby(['Category', 'Sub-Category'])['Sales ($-USD)'].sum().reset_index()
+
+ Lesson learnt: Use groupby + sum for aggregating numerical values, value_counts for counting occurrences.
+
+
+# [Log Entry 3] -> Analyze total sales per product category and sub-category.
+Grouped the dataset by Category and Sub-Category and calculated the total sales (using .sum()) for each group.
+This helped me identify which specific product segments would produce the most revenue.
+From the result, it's clear that the highest sales per product category and sub-category are:
+    1. Furniture -> Chairs -> $328,449.10
+    2. Office Supplies -> Storage -> $223,843.61
+    3. Technology -> Phones -> $330,007.05
