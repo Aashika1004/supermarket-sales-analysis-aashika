@@ -52,3 +52,13 @@ To find the top sub-category in each state:
        (basically one sub-category shown per state)
 From the results, this helped me identify what sells best in each state, which could be useful for developing
 location-specific sales strategies!
+
+# [Log Entry 6] -
+I counted the number of orders for each shipment mode using .value_counts() and set "normalize=True" to get the proportion
+of each mode, then multiplied that by 100 to get the percentages for better readability.
+Then, I created a pie chart using Matplotlib to visualize the share of each shipment mode.
+
+From the results, it is clear that Standard Class has the highest percentage (59.72%) of shipments, First Class and Second Class
+have similar shares at 15.39% and 19.46%, respectively, while Same Day shipping has the lowest percentage at 5.43%.
+Thus, this suggests that customers seem to prefer Standard Shipping, so it could be worth reconsidering the Same Day shipping option,
+as it is used very less frequently.
