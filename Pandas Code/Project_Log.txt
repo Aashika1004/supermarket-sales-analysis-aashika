@@ -62,3 +62,16 @@ From the results, it is clear that Standard Class has the highest percentage (59
 have similar shares at 15.39% and 19.46%, respectively, while Same Day shipping has the lowest percentage at 5.43%.
 Thus, this suggests that customers seem to prefer Standard Shipping, so it could be worth reconsidering the Same Day shipping option,
 as it is used very less frequently.
+
+# [Log Entry 7] - Analyzing the Corporate vs Consumer segment of customers
+I used two different means of analyzing data:
+    1. Total sales per segment (using .sum())
+        This gave me insights on how the Consumer, Corporate and Home Office segments brought revenue to the supermarket.
+        From the data it is clear that the highest revenue comes from Consumers, followed by Corporate and then lastly
+        by Home Offices.
+    2. The Average sales per segment (using .mean())
+        This gave me insights on how much approximately on a single order did each segment spend.
+        From the data it is clear that on average, Home Offices place higher value orders, even if their total sales
+        are among the lowest.
+        Consumers have the lowest average order value, which indicates that while their individual purchases might be smaller,
+        they are huge in numbers and thus make up the highest total sales overall.
