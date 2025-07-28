@@ -55,3 +55,20 @@ print(task_1_df)
 # print(task_2_df)
 
 # #[Log Entry 5]
+
+##------------------------------
+##TASK - 3 - Percentage of Standard vs. Second Class Shipments
+
+# #Used counts to count each occurrence of the shipment modes, used 'normalize' for % proportions and multiplied by 100 for readability.
+# task_3_df = df.value_counts(subset='Ship Mode', normalize=True) * 100
+# print(task_3_df)
+
+# #[Log Entry 6]
+
+# #Plotting the Pie chart using matplotlib
+# mylabels=task_3_df.index
+# plt.pie(task_3_df, labels = mylabels)
+# plt.title('Percentage of Standard vs. Second Class Shipments')
+# plt.legend(loc='lower left', bbox_to_anchor=(0.9, 0.5))
+# #plt.savefig('task-3-pie-chart-matplotlib.png')
+# plt.show()
