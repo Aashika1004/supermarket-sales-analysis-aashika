@@ -72,3 +72,17 @@ print(task_1_df)
 # plt.legend(loc='lower left', bbox_to_anchor=(0.9, 0.5))
 # #plt.savefig('task-3-pie-chart-matplotlib.png')
 # plt.show()
+
+# --------------------------
+
+##TASK - 4 -> Compare Corporate vs. Consumer Customers
+
+# #Grouping by segment and then using .sum() aggregate function to get the total sales per segment.
+# task_4_df_sum = df.groupby('Segment')['Sales ($-USD)'].sum().reset_index()
+# #Average order value by segment.
+# task_4_df_mean = df.groupby('Segment')['Sales ($-USD)'].mean()
+# print(task_4_df_sum)
+# print("------")
+# print(task_4_df_mean)
+
+##[Log Entry 7]
