@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 df = pd.read_csv('SampleSuperstore.csv')
 # Formatting floats for better readability of figures
@@ -97,3 +98,41 @@ print(task_1_df)
 # print(task_5_df_sorted)
 
 ##[Log Entry 8]
+
+# --------------------------
+# # TASK-6 -> Regional Profitability Analysis
+##[Log Entry 9]
+
+# #Used a dictionary to apply different aggregation function to different columns.
+# agg_dict = { 'Profit ($-USD)': 'mean', 'Sales ($-USD)': 'sum'}
+# #Grouped the data by region and aggregated the mean profit and total sales for each region.
+# task_6_df_grouped = df.groupby('Region').agg(agg_dict).reset_index()
+# #Sorted the values by Profit in their descending order.
+# task_6_sorted = task_6_df_grouped.sort_values(by='Profit ($-USD)', ascending=False)
+# print(task_6_sorted)
+# print('---------')
+# #Now similarly, calculating the total Profit and Sales, then deriving Profit Margin
+# agg_dict2 = { 'Profit ($-USD)': 'sum', 'Sales ($-USD)': 'sum'}
+# p_df = df.groupby('Region').agg(agg_dict2).reset_index()
+# # # Created a new column, "Profit Margin (%)", which is the result of dividing total profit by total Sales (revenue).
+# p_df['Profit Margin (%)'] = (p_df['Profit ($-USD)']/ p_df['Sales ($-USD)']) * 100
+# # #The data is sorted in descending order to get the region with the highest profit margin.
+# p_df_sorted = p_df.sort_values(by='Profit Margin (%)', ascending = False)
+# print(p_df_sorted)
+
+# ##[Log Entry 10]
+
+# ##Plotting a bar graph using seaborn.
+# sns.barplot(
+#      data=p_df,
+#      x='Region',
+#      y='Profit Margin (%)',
+#      hue='Region',
+#      palette='pastel'
+# )
+# plt.title("Profit Margin by Region", fontsize='14', fontweight='medium')
+# plt.ylabel("Profit Margin (%)", fontsize=12)
+# plt.xlabel("Region", fontsize=12)
+# plt.tight_layout()
+# #plt.savefig('task-6-bar-graph-seaborn.png')
+# plt.show()
