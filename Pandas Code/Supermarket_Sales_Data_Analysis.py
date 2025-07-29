@@ -136,3 +136,25 @@ print(task_1_df)
 # plt.tight_layout()
 # #plt.savefig('task-6-bar-graph-seaborn.png')
 # plt.show()
+
+# --------------------------
+# ## TASK-7 -> Discount Impact on Profitability
+
+# agg_dict_task7 = { 'Profit ($-USD)':'sum', 'Sales ($-USD)':'sum'}
+# #Grouped the data by Discount and calculated total Profit and Sales.
+# task_7_df_grouped = df.groupby(['Discount']).agg(agg_dict_task7).reset_index()
+# print(task_7_df_grouped)
+# #[Log Entry 11]
+
+# #Plotting a regression graph using seaborn.
+# sns.regplot(data=task_7_df_grouped,
+#              x='Discount',
+#              y='Profit ($-USD)',
+#              scatter_kws={'alpha':0.5}, color='orange')
+#
+# plt.title('Profit Distribution by Discount Level')
+# plt.xlabel('Discount (%)')
+# plt.ylabel('Total Profit ($-USD)')
+# plt.tight_layout()
+# # plt.savefig('task-7-regression-plot-seaborn.png')
+# plt.show()
