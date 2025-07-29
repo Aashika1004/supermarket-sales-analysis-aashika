@@ -11,7 +11,7 @@ df.rename(columns={
     'Sales': 'Sales ($-USD)'
 }, inplace=True)
 
-##TASK-1 -> Analyze total sales per product category
+##TASK-1 -> Analyze total sales per product category and sub-category.
 
 ## [NOTE] The following statements are only for Column review and Pre-Analysis checks.
 ##        These are not intended to be part of the main analysis pipeline.
@@ -27,8 +27,8 @@ df.rename(columns={
 
 # #[Log Entry 2]
 #Using groupby to group required columns and sum for aggregation, finally using reset_index to turn result into DataFrame.
-task_1_df = df.groupby(['Category', 'Sub-Category'])['Sales ($-USD)'].sum().reset_index()
-print(task_1_df)
+# task_1_df = df.groupby(['Category', 'Sub-Category'])['Sales ($-USD)'].sum().reset_index()
+# print(task_1_df)
 
 # #[Log Entry 3]
 
@@ -37,10 +37,24 @@ print(task_1_df)
 # plt.barh(task_1_df['Sub-Category'], task_1_df['Sales ($-USD)'])
 # plt.ylabel('Sub-Category')
 # plt.xlabel('Total Sales ($-USD)')
-# plt.title('Total Sales ($-USD) per Product Category')
+# plt.title('Total Sales ($-USD) per Sub-Product Category')
 # #plt.savefig('task-1-graph-matplotlib.png')
 # plt.show()
 
+#[Additional task]: Just experimenting with a pie chart to visualize category-wise sales distribution
+# #Grouping by Category and calculating the total Sales per Category
+# task_1_pie_series = df.groupby('Category')['Sales ($-USD)'].sum()
+# #Calculating the percentage of Sales per Category
+# task_1_pie_series =(task_1_pie_series/task_1_pie_series.sum()) * 100
+#
+# #Plotting the Pie chart using matplotlib
+# myPieLabel=task_1_pie_series.index
+# colors = ['#f1dede', '#d496a7', '#5d576b']
+# plt.pie(task_1_pie_series, labels = myPieLabel, colors = colors, autopct= '%1.2f%%')
+# plt.title('Percentage of Sales per product category')
+# plt.legend(loc='lower left', bbox_to_anchor=(0.9, 0.5))
+# # plt.savefig('task-1-pie-chart-matplotlib.png')
+# plt.show()
 ##------------------------------
 ##TASK-2 -> For each state, find only the top-performing sub-category, based on total sales.
 ##[Log Entry 4]
