@@ -95,10 +95,14 @@ df.rename(columns={
 # #Grouping by segment and then using .sum() aggregate function to get the total sales per segment.
 # task_4_df_sum = df.groupby('Segment')['Sales ($-USD)'].sum().reset_index()
 # #Average order value by segment.
-# task_4_df_mean = df.groupby('Segment')['Sales ($-USD)'].mean()
+# task_4_df_mean = df.groupby('Segment')['Sales ($-USD)'].mean().reset_index()
+# #Renaming the column for readability
+# task_4_df_mean.rename(columns={'Sales ($-USD)': 'Mean Sales'}, inplace=True)
+# #Sorting Segment by descending order
+# task_4_df_mean_sorted = task_4_df_mean.sort_values(by='Mean Sales',ascending=False)
 # print(task_4_df_sum)
 # print("------")
-# print(task_4_df_mean)
+# print(task_4_df_mean_sorted)
 
 ##[Log Entry 7]
 
