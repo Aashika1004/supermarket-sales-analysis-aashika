@@ -75,3 +75,8 @@ I used two different means of analyzing data:
         are among the lowest.
         Consumers have the lowest average order value, which indicates that while their individual purchases might be smaller,
         they are huge in numbers and thus make up the highest total sales overall.
+
+# [Log Entry 8] - Identify top-performing sub-categories/products
+From the result it is clear that the top-selling sub-category is Phones, followed by Chairs and Storage.
+And niche accessories like Envelopes, Labels and Fasteners were the lowest selling items, so these
+could items could be replaced with some other new items.
