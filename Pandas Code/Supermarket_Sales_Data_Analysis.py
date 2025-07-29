@@ -86,3 +86,14 @@ print(task_1_df)
 # print(task_4_df_mean)
 
 ##[Log Entry 7]
+
+# --------------------------
+## TASK-5 -> Identify top-performing sub-categories/products
+
+# #Grouping by Sub-Category and calculating total sales per Sub-Category
+# task_5_df_grouped = df.groupby('Sub-Category')['Sales ($-USD)'].sum().reset_index()
+# #Sorting the values in descending order
+# task_5_df_sorted = task_5_df_grouped.sort_values('Sales ($-USD)', ascending=False)
+# print(task_5_df_sorted)
+
+##[Log Entry 8]
