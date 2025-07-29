@@ -107,3 +107,23 @@ I analyzed data in two aspects:
 
 From this analysis, it is clear that the Central region needs urgent modifications, whether in pricing strategies,
 discount policies, or operational efficiency.
+
+# [Log Entry 11] - Discount Impact on Profitability
+I grouped the data by 'Discount' and calculated total Profit and Sales using .sum() aggregate function.
+Let us analyze the impact of different percentages of discount:
+    1. 0% Discount
+       The results show that the items not on discount yielded the highest profit($320,987.60) and
+       sales ($1,087,908.47). This indicates that full price items are in fact the most profitable (kind of obvious huh).
+    2. 10-20% Discount
+       The results show that the items in the mid-range discount show significantly positive profit
+       (e.g., for 20% the profit is $90,337.31) and high sales.
+    3. 30-50% Discount
+       This is where the profits now start to take a hit and decline, with almost all profits being in negative and
+       order volume of sales being really low (e.g., For 40% the profit is -23,057.05)
+    4. 60%-80% Discount
+       This range of discount had the worst profitability overall, and the lowest amount of sales.
+       This could suggest that unless the items are meant for clearance sales, such high discounts
+       would result in loss of profit.
+So in conclusion, the analysis shows that moderate discounts (in the 10% - 30% range) increases sales and yield
+positive profit, while excessively high discounts only lead to losses. There is a limit to discounting,beyond that
+limit, sales do not increase proportionally with revenue but, in fact, leads to a loss of revenue.
