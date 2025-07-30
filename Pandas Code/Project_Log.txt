@@ -47,7 +47,7 @@ From the result, it's clear that the highest sales per product category and sub-
     print(task_2_df)
  Result: This only returned a single maximum value, and not one product per state. My logic itself was incorrectly applied
          as I realized max doesn't return the top-selling product per grouped category (oops)
- Lesson learnt: Use .sort_values() (with ascending order of State and descending order of Sales) to properly sort the grouped dataset.
+ Lesson learnt: Use .sort_values() (with ascending order of State and descending order of Sales) to properly sort the                        grouped dataset.    
                 Then, work with that sorted data to extract the top item per state.
 
 # [Log Entry 5] - Finding only the top-performing sub-category, based on total sales, for each state
@@ -80,13 +80,13 @@ I used two different means of analyzing data:
         This gave me insights on how much approximately on a single order did each segment spend.
         From the data it is clear that on average, Home Offices place higher value orders, even if their total sales
         are among the lowest.
-        Consumers have the lowest average order value, which indicates that while their individual purchases might be smaller,
-        they are huge in numbers and thus make up the highest total sales overall.
+        Consumers have the lowest average order value, which indicates that while their individual purchases might be                smaller, they are huge in numbers and thus make up the highest total sales overall.
 
 # [Log Entry 8] - Identify top-performing sub-categories/products
 From the result it is clear that the top-selling sub-category is Phones, followed by Chairs and Storage.
 And niche accessories like Envelopes, Labels and Fasteners were the lowest selling items, so these
 could items could be replaced with some other new items.
+
 # [Log Entry 9] - Incorrect use of trying to apply multiple aggerate function to different columns
 Tried using the following codes to get the mean of 'Profit' column and sum of 'Sales' column:
     1.task_6_df_grouped = df.groupby('Region')['Profit'].mean()['Sales'].sum().reset_index()
