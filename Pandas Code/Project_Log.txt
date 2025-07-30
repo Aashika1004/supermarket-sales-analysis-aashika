@@ -3,6 +3,13 @@ Introduction:
     This mini project was a way to help me get more familiarized with Pandas, Matplotlib and Seaborn while also revisiting
     core Python skills!
 
+A few notes:
+1. This dataset was taken from kaggle, and is from different chains of a supermarket across the US, so the sales and profit
+   are calculated in $-USD.
+2. The initial exploratory print statements were only used in Task 1 to understand the structure of the dataset.
+   As I progressed, these checks became unnecessary and were omitted in later tasks for clarity and to keep the code more       cleaner.
+----------
+
 # [Log Entry 1] - Grouping of Multiple columns
  Tried to print grouped data using:
     grouped_data = df.groupby(['Category', 'Sub-Category', 'Sales'])
@@ -30,9 +37,9 @@ Introduction:
 Grouped the dataset by Category and Sub-Category and calculated the total sales (using .sum()) for each group.
 This helped me identify which specific product segments would produce the most revenue.
 From the result, it's clear that the highest sales per product category and sub-category are:
-    1. Furniture -> Chairs -> $328,449.10
-    2. Office Supplies -> Storage -> $223,843.61
-    3. Technology -> Phones -> $330,007.05
+    1. Technology -> Phones -> $330,007.05
+    2. Furniture -> Chairs -> $328,449.10
+    3. Office Supplies -> Storage -> $223,843.61
 
 # [Log Entry 4] - Incorrect Sorting Logic
  Tried using the following code to get the top-selling product in each state (not included in main code):
