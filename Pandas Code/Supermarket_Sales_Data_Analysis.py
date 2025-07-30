@@ -81,8 +81,9 @@ df.rename(columns={
 # #[Log Entry 6]
 
 # #Plotting the Pie chart using matplotlib
-# mylabels=task_3_df.index
-# plt.pie(task_3_df, labels = mylabels)
+# myLabel=task_3_df.index
+# colors = ['#b8a4c9','#c9def4','#f5ccd4', '#F0A8C0']
+# plt.pie(task_3_df, labels = myLabel, colors= colors, autopct= '%1.2f%%')
 # plt.title('Percentage of Standard vs. Second Class Shipments')
 # plt.legend(loc='lower left', bbox_to_anchor=(0.9, 0.5))
 # #plt.savefig('task-3-pie-chart-matplotlib.png')
